@@ -1,16 +1,20 @@
 class SmallPizza():
     def __init__(self):
-        self.SmallPizza = 10
+        self.name = 'Small Pizza'
+        self.Price = 10
 
 class MediumPizza():
     def __init__(self):
-        self.Medium = 12
+        self.name = 'Medium Pizza'
+        self.Price = 12
 
 class LargePizza():
     def __init__(self):
-        self.Large = 15
+        self.name = 'Large Pizza'
+        self.Price = 15
 
 class XLargePizza():
     def __init__(self):
-        self.XLarge = 18
+        self.name = 'Extra Large Pizza'
+        self.Price = 18
 
