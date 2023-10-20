@@ -2,7 +2,11 @@ import PizzaClass
 
 print("What is Your name?")
 name = input(": ")
-
+print("Nice to meet you, " + name)
+print("what is your email address?")
+email = input(": ")
+print("What is your adress?")
+address = input(": ")
 print("What size Pizza would you like?")
 input("1: Small, 2: Medium, 3: Large or 4: Extra Large")
 
@@ -67,6 +71,7 @@ while t == 0:
         t = t + 1
         TotalPrice = (userchoice2 * Pizza.Price) * 0.85
         print("Your total after discount is, $" + str(TotalPrice))
+        print("Order will be delivered to " )
     
     else:
         t = t + 1
