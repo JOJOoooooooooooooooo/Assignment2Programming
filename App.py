@@ -1,4 +1,7 @@
 import PizzaClass
+import UserClass
+
+userinfo = UserClass.User
 
 print("What is Your name?")
 name = input(": ")
@@ -7,6 +10,8 @@ print("what is your email address?")
 email = input(": ")
 print("What is your adress?")
 address = input(": ")
+userinfo = UserClass.User(name, email, address)
+
 print("What size Pizza would you like?")
 input("1: Small, 2: Medium, 3: Large or 4: Extra Large")
 
@@ -71,9 +76,13 @@ while t == 0:
         t = t + 1
         TotalPrice = (userchoice2 * Pizza.Price) * 0.85
         print("Your total after discount is, $" + str(TotalPrice))
-        print("Order will be delivered to " )
+        print("Order will be delivered to, " + str(userinfo.name) + " at " + str(userinfo.address))
+        print("Receipt will be emailed to you via " + str(userinfo.email))
     
     else:
         t = t + 1
         TotalPrice = (userchoice2 * Pizza.Price)
         print("Your total is, $" + str(TotalPrice))
+        print("Order will be delivered to, " + str(userinfo.name) + " at " + str(userinfo.address))
+        print("Receipt will be emailed to you via " + str(userinfo.email))
+    
