@@ -56,7 +56,7 @@ print("Discount: Buy 3 get ~~ 15% OFF ~~ final price!\n")
 a = 0 
 
 while a == 0:
-    userchoice2 = input("How many pizza's would you like: ")
+    userchoice2 = input("How many pizza's would you like? Please enter a digit: ")
 
     if int(userchoice2) > 0:
         a = a + 1
