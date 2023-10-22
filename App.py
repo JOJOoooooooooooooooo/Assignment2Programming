@@ -3,17 +3,15 @@ import UserClass
 
 userinfo = UserClass.User
 
-print("What is Your name?")
-name = input(": ")
-print("Nice to meet you, " + name)
-print("what is your email address?")
-email = input(": ")
-print("What is your adress?")
-address = input(": ")
+print("\n------------------Welcome to Papa JOJO's!------------------\n")
+name = input("What is Your name?: ")
+input("Nice to meet you, " + name)
+email = input("what is your email address?: ")
+address = input("What is your adress?: ")
 userinfo = UserClass.User(name, email, address)
 
 print("What size Pizza would you like?")
-input("1: Small, 2: Medium, 3: Large or 4: Extra Large")
+print("1: Small, 2: Medium, 3: Large or 4: Extra Large")
 
 x = 0 
 
