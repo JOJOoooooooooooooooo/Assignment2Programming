@@ -50,7 +50,7 @@ while x == 0:
         x = 0
         print("Invalid input, try again.\n")
 
-print("Discount: Buy 3 get ~~ 15% OFF ~~ final price!\n")
+print("Discount: Buy 3 or more pizza's and get ~~ 15% OFF ~~ final price!\n")
 
 
 a = 0 
