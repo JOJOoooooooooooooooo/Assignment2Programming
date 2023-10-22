@@ -5,82 +5,86 @@ userinfo = UserClass.User
 
 print("\n------------------Welcome to Papa JOJO's!------------------\n")
 name = input("What is Your name?: ")
-input("Nice to meet you, " + name)
-email = input("what is your email address?: ")
+input("\nNice to meet you, " + name)
+email = input("\nwhat is your email address?: ")
 address = input("What is your adress?: ")
 userinfo = UserClass.User(name, email, address)
 
-print("What size Pizza would you like?")
-print("1: Small, 2: Medium, 3: Large or 4: Extra Large")
+print("\nWhat size Pizza would you like?")
+print(" (1) - Small\n (2) - Medium\n (3) - Large\n (4) - Extra Large")
 
 x = 0 
 
 while x == 0: 
 
-    userselection = input("Please select an option: ")
+    userselection = input("\nPlease select an option: ")
 
     if userselection == "1":
         x = x + 1
         print("Small Pizza, Good choice!")
         Pizza = PizzaClass.SmallPizza()
-        print("One Pizza of this size is $" + str(Pizza.Price))
+        print("\nOne Pizza of this size is $" + str(Pizza.Price))
 
     elif userselection == '2':
         x = x + 1
         print("Medium Pizza, Good choice!")
         Pizza = PizzaClass.MediumPizza()
-        print("One Pizza of this size is $" + str(Pizza.Price))
+        print("\nOne Pizza of this size is $" + str(Pizza.Price))
 
     
     elif userselection == '3':
         x = x + 1
         print("Large Pizza, Good choice!")
         Pizza = PizzaClass.LargePizza()
-        print("One Pizza of this size is $" + str(Pizza.Price))
+        print("\nOne Pizza of this size is $" + str(Pizza.Price))
 
 
     elif userselection == '4':
         x = x + 1
-        print("Extra Large Pizza, Good choice!")
+        print("Extra Large Pizza, VEERRRYYYY Good choice!")
         Pizza = PizzaClass.XLargePizza()
-        print("One Pizza of this size is $" + str(Pizza.Price))
+        print("\nOne Pizza of this size is $" + str(Pizza.Price))
 
 
     else:
         x = 0
-        print("Invalid input")
+        print("Invalid input, try again.\n")
 
-print("how many Pizzas of this size would you like to order?")
-print("please keep in mind, if you order 3 or more pizza's you get a 15 percent discount!")
+print("Discount: Buy 3 get ~~ 15% OFF ~~ final price!\n")
 
 
 a = 0 
 
 while a == 0:
-    userchoice2 = int(input(":"))
+    userchoice2 = input("How many pizza's would you like: ")
 
     if int(userchoice2) > 0:
         a = a + 1
-        print("you have ordered " + str(userchoice2) + " " + Pizza.name + "'s")
+        print("You have ordered " + str(userchoice2) + " " + Pizza.name + "'s")
         
     else:
         x = 0
-        print("Invalid input")
+        print("Invalid input, try again.")
 
 t = 0
 
 while t == 0:
-    if int(userchoice2) >= 3:
+    if float(userchoice2) >= 3:
+        print("\n\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
+        print("- - - - - - - - - - - - - - - - - - - - - - - - - RECIPT - - - - - - - - - - - - - - - - - - - - - - -\n")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n\n")
         t = t + 1
-        TotalPrice = (userchoice2 * Pizza.Price) * 0.85
-        print("Your total after discount is, $" + str(TotalPrice))
-        print("Order will be delivered to, " + str(userinfo.name) + " at " + str(userinfo.address))
-        print("Receipt will be emailed to you via " + str(userinfo.email))
+        TotalPrice = round(((float(userchoice2) * float(Pizza.Price)) * 0.85), 2)
+        print("Your total after discount is: $" + str(TotalPrice))
+        print("Order will be delivered to: " + str(userinfo.name) + " at " + str(userinfo.address))
+        print("Receipt will sent via email to: " + str(userinfo.email))
     
     else:
+        print("\n\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
+        print("- - - - - - - - - - - - - - - - - - - - - - - - - RECIPT - - - - - - - - - - - - - - - - - - - - - - -\n")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n\n")
         t = t + 1
-        TotalPrice = (userchoice2 * Pizza.Price)
-        print("Your total is, $" + str(TotalPrice))
-        print("Order will be delivered to, " + str(userinfo.name) + " at " + str(userinfo.address))
-        print("Receipt will be emailed to you via " + str(userinfo.email))
-    
+        TotalPrice = round((float(userchoice2) * float(Pizza.Price)), 2)
+        print("Your total is: $" + str(TotalPrice))
+        print("Order will be delivered to: " + str(userinfo.name) + " at " + str(userinfo.address))
+        print("Receipt will sent via email to: " + str(userinfo.email))
